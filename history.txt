@@ -1,0 +1,36 @@
+  396  cd Desktop/
+  397  mkdir CTA200A1
+  398  cd CTA200A1/
+  399  git init
+  400  git remote add origin https://github.com/CalebLammers/CTA200A1.git
+  401  git remote set-url origin https://CalebLammers@github.com/CalebLammers/CTA200A1.git
+  402  git remote -v
+  403  gedit README.md
+  404  gedit LICENSE
+  405  git add README.md LICENSE
+  406  git commit -m "First commit"
+  407  cp -av /home/student10/Desktop/CTA200H/assignment1_2020/average.c /home/student10/Desktop/CTA200A1/
+  408  dir
+  409  cp -av /home/student10/Desktop/CTA200H/assignment1_2020/average.h /home/student10/Desktop/CTA200A1/
+  410  dir
+  411  cp -av /home/student10/Desktop/CTA200H/assignment1_2020/main.c /home/student10/Desktop/CTA200A1/
+  412  dir
+  413  pwd
+  414  gedit Makefile
+  415  make
+  416  ./output
+  417  make clean
+  418  ./output
+  419  make
+  420  ./output
+  421  make clean
+  422  ./output
+  423  git add average.h average.c main.c Makefile
+  424  git commit -m "Copied files from assignment1_2020 and created makefile"
+  425  git push
+  426  git push -u origin master
+  427  gedit main.c 
+  428  git add main.c
+  429  git commit -m "Added a second calculation and print to main.c"
+  430  git push
+  431  history > history.txt

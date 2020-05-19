@@ -211,13 +211,13 @@ applying MCMC to the the $\chi ^2$ model is pointless because we have an analyti
 we now adopt a more complex model with the assumption that the errors were somewhat underestimated.
 
 \begin{figure}[H]
-\[\ln({p}) = -\frac{1}{2} \sum_{i=1}^{N = 1} \frac{(y_i - f(x_i))^2}{s_i^2} + \ln({2\pi s_i^2})\]
-\[ s_i^2 = \sigma_{i}^2 + f_0^2 f(x_i)\]
+\[\ln({p}) = -\frac{1}{2} \sum_{i=1}^{N = 1} \frac{(y_i - m(x_i) - b)^2}{s_i^2} + \ln({2\pi s_i^2})\]
+\[ s_i^2 = \sigma_{i}^2 + f^2 (m(x_i) + b)^2\]
 \caption{Likelihood function for new model}
 \end{figure}
 
-Notice that this model has a so-called nuisance parameter $f_0^2$. Because it is now not clear that
-there is an analytical solution or even how f, m, and b (of course, $f(x_i) = m*x_i + b$) should
+Notice that this model has a so-called nuisance parameter $f^2$. Because it is now not clear that
+there is an analytical solution or even how f, m, and b should
 relate, MCMC is useful. To use MCMC, we define a uniform prior probability function, and use python
 emcee's features. With 32 walkers centered around the values found from weighted linear least-square fitting and
 10000 steps we get the following Markov chain.

@@ -1,1 +1,1 @@
-Project created for CTA200 2020 Assignment 1.
+### Github repository for CTA200 2020
